@@ -105,13 +105,13 @@ Objects that represent AST nodes replace the current node instead of being inser
 
 * `macro.identity(value: T): T`: returns the value. Useless, but can prevent warnings about unused `macro` with eslint.
 
-* `macro.define(name: string, value: any)`: define a variable in the macro-expansion environment. Can be accessed as property of `macro`.
+* `macro.define(name: string, value: any)`: define a variable in the macro-expansion environment, which can be accessed by name as property of `macro`.
 
 * `macro.ast`: the entire AST.
 
 * `macro.node`: current node (the macro arrow function).
 
-* `macro.require`: exposes `require`, which is not required inside macros by default.
+* `macro.require`: exposes `require`, which is not available inside macros by default.
 
 * `macro.expand(node: ASTNode)`: calls the macro expander, for whatever reason.
 
