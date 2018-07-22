@@ -1,0 +1,26 @@
+{
+  "name": "js-experimental-macros",
+  "version": "0.0.1",
+  "description": "(Experimental) JavaScript Macros",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest .",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.0",
+    "eslint": "^5.1.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "jest": "^23.4.0"
+  },
+  "dependencies": {
+    "espree": "^4.0.0",
+    "recast": "^0.15.2"
+  }
+}

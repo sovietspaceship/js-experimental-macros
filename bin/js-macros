@@ -1,0 +1,8 @@
+
+const {
+    compileFile
+} = require('../lib')
+
+const filename = process.argv[2]
+
+compileFile(filename).then(console.log)
