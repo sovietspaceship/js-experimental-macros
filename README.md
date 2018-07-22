@@ -28,7 +28,7 @@ const fibonacci = macro => {
         v[i] = v[i - 1] + v[i - 2];
     }
 
-    return macro.identity(v)
+    return v
 }
 
 console.log(fibonacci)
@@ -158,18 +158,24 @@ returns the output via stdout.
 
 ### Library usage
 
-`exports.parse(src: string): ASTNode`: parse source code
-`exports.parseFile(filename: string): ASTNode`: parse file; appends .js if .js or .jsx are missing in `filename`
-`exports.transform(ASTNode): ASTNode`: expand macros
-`exports.emit(ast: ASTNode): string`: generate code from AST
-`exports.compile(src: string): string`: load, expand, emit source
-`exports.compileFile(filename: string): Promise<string>`: load, expand, emit source
+* `exports.parse(src: string): ASTNode`: parse source code
+
+* `exports.parseFile(filename: string): ASTNode`: parse file; appends .js if .js or .jsx are missing in `filename`
+
+* `exports.transform(ASTNode): ASTNode`: expand macros
+
+* `exports.emit(ast: ASTNode): string`: generate code from AST
+
+* `exports.compile(src: string): string`: load, expand, emit source
+
+* `exports.compileFile(filename: string): Promise<string>`: load, expand, emit source
 
 ## To do
 
 * Improve API
 * Replace `deepFind` with `esquery` or `esprima-selector`
 * Refactor the whole thing
+* Find a way to implicitly decompile runtime functions as values
 
 ## License
 
